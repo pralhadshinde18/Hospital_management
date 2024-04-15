@@ -19,4 +19,4 @@ class Hospital(Base):
 
     technicians = relationship("Technician", back_populates="hospital")
     reporting_doctors = relationship("ReportingDoctor", back_populates="hospital")
-    patients = relationship("Patient",secondary=patient_hospital_link,back_populates="hospitals")
+    patients = relationship("Patient", secondary=patient_hospital_link, back_populates="hospitals")

@@ -9,7 +9,3 @@ class TechnicianDomain:
     def validate(self, technician_data: TechnicianCreate):
         if technician_data.contact_number < 1:
             raise ValueError("contact number must be greater than 1")
-
-
-
-

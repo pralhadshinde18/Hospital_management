@@ -14,11 +14,13 @@ class HospitalRepository:
         db.refresh(db_hospital)
         db.close()
         return db_hospital
+
     def get_all_hospitals(self) -> List[GetHospitalResponse]:
         db = SessionLocal()
         hospitals = db.query(Hospital).all()
         db.close()
         return hospitals
+
     def update_hospital(self, hospital_id: int, hospital_domain: HospitalDomain) -> GetHospitalResponse:
         db = SessionLocal()
         db_hospital = db.query(Hospital).filter(Hospital.id == hospital_id).first()
@@ -30,6 +32,7 @@ class HospitalRepository:
             db.refresh(db_hospital)
         db.close()
         return db_hospital
+
     def delete_hospital(self, hospital_id: int) -> GetHospitalResponse:
         db = SessionLocal()
         db_hospital = db.query(Hospital).filter(Hospital.id == hospital_id).first()

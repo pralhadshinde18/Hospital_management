@@ -4,6 +4,7 @@ from schema.document_schema import GetDocumentResponse
 from model.document_model import Document
 from domain.document_domain import DocumentDomain
 
+
 class DocumentRepository:
     def create_document(self, document_domain: DocumentDomain) -> GetDocumentResponse:
         db_document = Document(**document_domain.document_data.dict())

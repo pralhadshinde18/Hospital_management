@@ -26,5 +26,5 @@ class ReportingDoctorCreate(ReportingDoctorBase):
 class GetReportingDoctor(ReportingDoctorBase):
     id: int
 
-    class config:
+    class Config:
         orm_mode = True

@@ -1,7 +1,8 @@
 from repository.document_repo import DocumentRepository
 from domain.document_domain import DocumentDomain
-from schema.document_schema import GetDocumentResponse,DocumentCreate
+from schema.document_schema import GetDocumentResponse, DocumentCreate
 from typing import List
+
 
 class DocumentService:
     def __init__(self):

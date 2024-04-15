@@ -5,7 +5,6 @@ from model.patient_model import Patient
 from schema.patient_schema import GetPatientResponse
 
 
-
 class PatientRepository:
     def create_patient(self, patient_domain: PatientDomain) -> GetPatientResponse:
         db_patient = Patient(**patient_domain.patient_data.dict())
